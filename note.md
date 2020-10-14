@@ -117,3 +117,26 @@ int fputs(const char *str, FILE *stream);
 
 eg：freopen("./test1.txt","r",fp);
 
+int fseek( FILE *stream, long offset, int origin );
+
+第一个参数stream为文件[指针](https://baike.baidu.com/item/指针)
+
+第二个参数offset为[偏移量](https://baike.baidu.com/item/偏移量)，正数表示正向偏移，负数表示负向偏移
+
+第三个参数origin设定从文件的哪里开始偏移,可能取值为：SEEK_CUR、 SEEK_END 或 SEEK_SET
+
+SEEK_SET： 文件开头
+
+SEEK_CUR： 当前位置
+
+SEEK_END： 文件结尾
+
+其中SEEK_SET,SEEK_CUR和SEEK_END依次为0，1和2.
+
+简言之：
+
+fseek(fp,100L,0);把stream指针移动到离文件开头100字节处；
+
+fseek(fp,100L,1);把stream指针移动到离文件当前位置100字节处；
+
+fseek(fp,-100L,2);把stream指针退回到离文件结尾100字节处。
