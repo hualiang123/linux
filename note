@@ -1,4 +1,6 @@
-Linux命令：
+linux一般有四个部分：内核，Shell，文件结构，实用程序
+
+Linux常用命令：
 1.mkdir 在当前目录下创建子目录
 2.cd/ 回到根目录下，cd xxxx 进入xxxx
 3.pwd 查看当前绝对路径
