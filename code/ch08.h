@@ -7,9 +7,15 @@
 #include<stdlib.h>
 #include<time.h>
 #include<dlfcn.h>
+#include<setjmp.h>
 void err_exit(char *s)
 {
 
 	printf("USAGE : *s is faile!\n");
 	exit(1);
+}
+
+int cmp(const void *a,const void *b)
+{
+	return *(int*)a-*(int*)b;
 }
