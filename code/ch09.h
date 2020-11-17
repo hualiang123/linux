@@ -8,6 +8,13 @@
 #include<time.h>
 #include<dlfcn.h>
 #include<setjmp.h>
+#include<wait.h>
+#include<errno.h>
+
+#define INFILE "./in.txt"
+#define OUTFILE "./out.txt"
+#define  MODE S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH
+
 void err_exit(char *s)
 {
 
@@ -15,7 +22,3 @@ void err_exit(char *s)
 	exit(1);
 }
 
-int cmp(const void *a,const void *b)
-{
-	return *(int*)a-*(int*)b;
-}
