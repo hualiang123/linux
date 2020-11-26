@@ -10,15 +10,12 @@
 #include<setjmp.h>
 #include<wait.h>
 #include<errno.h>
-
 #define INFILE "./in.txt"
 #define OUTFILE "./out.txt"
-#define  MODE S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH
-
+#define MODE S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH
 void err_exit(char *s)
 {
 
 	printf("USAGE : *s is faile!\n");
 	exit(1);
 }
-

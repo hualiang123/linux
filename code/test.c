@@ -1,16 +1,12 @@
-#include"ch09.h"
+#include"./ch10.h"
 int main(int argc,char **argv)
 {
-        extern char **environ;
-	char **env=environ;
-	int i;
-	for(i=1;i<argc;i++)
-	printf("%s ",argv[i]);
-	while(*env)
-	{
-		printf("%s\n",*env);
-		env++;
-	}
-	exit(EXIT_SUCCESS);
+int i;
+printf("test : pid =%d,ppid=%d\n",getpid(),getppid());
+for(i=0;i<argc;i++)
+{
+printf("argv[%d]=%s\n",i,argv[i]);
 }
-
+sleep(2);
+return 99;
+}
