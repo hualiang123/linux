@@ -176,6 +176,3 @@ int randdat()
 	printf("%d\t%s\t%s\t%s\n",red.id,red.name,red.htel,red.tel);
 	return 1;
 }
-
-
-
