@@ -5,7 +5,7 @@ int main()
         int fd;
         fd=open("./test1.txt",O_RDWR);
         fp=fdopen(fd,"w+");
-        fprintf(fp,"test data %s","hello wrold");
+        fprintf(fp,"test data %s","hello world");
         fclose(fp);
         return 0;
 } 
